@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend List</title>
+    <style>
+      table, tr, th, td {
+         border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Waktu</th>
+        <th>Tempat pelaksanaan</th>
+        <th>Jenis vaksin</th>
+        <th>Kuota</th>
+      </tr>
+      <!-- TODO loop from Friend model -->
+      {% if sesi %}
+          <tr>
+            <td>{{sesi.id}}</td>
+            <td>{{sesi.waktu}}</td>
+            <td>{{sesi.tempat_pelaksanaan}}</td>
+            <td>{{sesi.jenis_vaksin}}</td>
+            <td>{{sesi.kuota}}</td>
+          </tr>
+      {% endif %}
+    </table>
+  </body>
+</html>

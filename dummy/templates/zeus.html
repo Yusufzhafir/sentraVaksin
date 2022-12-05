@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend List</title>
+    <style>
+      table, tr, th, td {
+         border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <table>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+      <!-- TODO loop from Friend model -->
+      {% if users %}
+        {% for user in users %}
+          <tr>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+    </table>
+    
+  </body>
+</html>

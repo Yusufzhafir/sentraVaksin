@@ -1,0 +1,91 @@
+{% extends 'base_visitor.html' %}
+{% load static %}
+
+{% block title %}Lapor Efek Samping{% endblock title %}
+
+{% block additionallink %}
+<script src="{% static 'lapor-script.js' %}"></script>
+<link rel="stylesheet" href="{% static 'lapor-style.css' %}">
+{% endblock additionallink %}
+
+{% block navmenu %}
+<ul>
+<li>
+    <a class="nav-link" href="/jadwal">Jadwal Vaksin</a>
+</li>
+<li>
+    <a class="nav-link" href="/belum_vaksin">Registrasi Vaksin</a>
+</li>
+<li>
+    <a class="nav-link" href="/efek-samping/lapor">Lapor Keluhan</a>
+</li>
+
+</ul>
+
+{% endblock navmenu %}
+
+{% block tagline %}Laporan Efek Samping Vaksinasi{% endblock tagline %}
+
+{% block content %}
+
+        <form method="POST" action="" >
+        {%csrf_token%}
+            <div class="left">
+                <div class="field">
+                <label for="id_nama" class="form-label">Nama :</label>
+                <input id="id_nama" type="text" name="nama" required></input>
+                </div>
+
+                <div class="field">
+                <label for="id_nik" class="form-label">NIK :</label>
+                <input id="id_nik" type="text" name="nik" required></input>
+                </div>
+
+                <div class="field">
+                <label for="id_no_hp" class="form-label">No HP :</label>
+                <input id="id_no_hp" type="text" name="no_hp" required></input>
+                </div>
+
+                <div class="field">
+                <label for="id_alamat" class="form-label">Alamat :</label>
+                <textarea id="id_alamat" name="alamat" required></textarea>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="field">
+                <label for="id_vaksin" class="form-label">Vaksin :</label>
+                <input id="id_vaksin" name="vaksin" required></input>
+                </div>
+
+                <div class="field">
+                <label for="id_gejala" class="form-label">Gejala :</label>
+                <textarea id="id_gejala" name="gejala" class="gejala" required></textarea>
+                </div>
+
+                <div class="field">
+                <label class="form-label">Token</label>
+                <textarea id="id_token" name="token" required></textarea>
+                </div>
+
+                <button type="submit" value="submit"class="btn btn-warning btn-lg">Submit</button>
+            </div>
+
+
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+        {% if message.tags %} 
+        <script>
+        alert("{{message}}")
+        </script>
+        {% endif %} 
+        {% endfor %}
+    
+    {% endif %}
+    
+
+
+
+{% endblock content %}
+

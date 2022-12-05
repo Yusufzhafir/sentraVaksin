@@ -1,0 +1,59 @@
+{% extends 'base_admin.html' %}
+{% load static %}
+
+{% block title %}Data Laporan Efek Samping{% endblock title %}
+{% block additionallink %}
+
+<script src="{% static 'laporan-script.js' %}"></script>
+<link rel="stylesheet" href="{% static 'laporan-style.css' %}">
+{% endblock additionallink %}
+
+
+
+
+{% block navmenu %}
+<ul>
+<li>
+    <a class="nav-link" href="/jadwal">Jadwal Vaksin</a>
+</li>
+<li>
+    <a class="nav-link" href="/belum_vaksin">Registrasi Vaksin</a>
+</li>
+<li>
+    <a class="nav-link" href="/efek-samping/lapor">Lapor Keluhan</a>
+</li>
+<li>
+    <a class="nav-link" href="/daftar_nakes">Daftar Nakes</a>
+</li>
+<li>
+    <a class="nav-link" href="/">Sudah Vaksin</a>
+</li>
+</ul>
+
+{% endblock navmenu %}
+{% block tagline %}Laporan Efek Samping Vaksinasi{% endblock tagline %}
+
+
+{% block content %}
+
+<div class="table-container">
+    <table class="table table-borderless" id="table-attribute">
+    <thead>
+    <tr class="table-primary table-danger">
+        <th>Nama</th>
+        <th>NIK</th>
+        <th>Nomor HP</th>
+        <th>Alamat</th>
+        <th>Vaksin</th>
+        <th>Gejala</th>
+    </tr>
+    </thead>
+  
+    <tbody>
+    
+    </tbody>
+</table>
+
+</div>
+
+{% endblock content %}

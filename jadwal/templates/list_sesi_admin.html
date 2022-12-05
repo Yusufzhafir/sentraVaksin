@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jadwal Vaksinasi (Admin)</title>
+    <style>
+      table, tr, th, td {
+         border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Waktu</th>
+        <th>Tempat pelaksanaan</th>
+        <th>Jenis vaksin</th>
+        <th>Kuota</th>
+      </tr>
+      <!-- TODO loop from Friend model -->
+      {% if sesi %}
+        {% for s in sesi %}
+          <tr>
+            <td>{{s.waktu}}</td>
+            <td>{{s.tempat_pelaksanaan}}</td>
+            <td>{{s.jenis_vaksin}}</td>
+            <td>{{s.kuota}}</td>
+            <td><button><a href="edit_sesi/{{s.id}}">Edit</a></button></td>
+            <td><button><a href="delete_sesi/{{s.id}}">Delete</a></button></td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+    </table>
+    <button><a href="add_sesi">Tambah jadwal dan lokasi</a></button>
+  </body>
+</html>

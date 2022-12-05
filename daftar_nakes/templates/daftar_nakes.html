@@ -1,0 +1,65 @@
+{% extends "base_admin.html" %}
+{% load static %}
+{% include "navbar.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nakes - sentra vaksin</title>
+</head>
+<body>
+    <div class='container'>
+        <form method="POST" class="NakesForm">
+            {% csrf_token %}
+            <div class="inform">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="inform">
+                <label for="umur">Umur:</label>
+                <input type="text" id="umur" name="umur">    
+            </div>
+            <div class="inform">
+                <label for="RS">Rumah sakit:</label>
+                <input type="text" id="rumah_sakit" name="rumah_sakit">
+            </div>
+            <div class="inform">
+                <label for="pendidikan">pendidikan:</label>
+                <input type="text" id="pendidikan" name="pendidikan">    
+            </div>
+            <!-- </br> -->
+            <!-- <div class="inform">
+                <label for="sesi">Sesi:</label>
+                {{form.sesi}}
+            </div> -->
+            <input type="submit" value="Submit" class="button form">
+        </form>
+       <table>
+           <tr>
+               <th>Nama</th>
+               <th>Umur</th>
+               <th>Rumah Sakit</th>
+               <th>Pendidikan</th>
+               <th>action</th>
+           </tr>
+           {% for s in Nakes %}
+              <tr>
+                <td>{{s.nama}}</td>
+                <td>{{s.umur}}</td>
+                <td>{{s.rumah_sakit}}</td>
+                <td>{{s.pendidikan}}</td>
+                <td><button class="button"><a href="delete_nakes/{{s.id}}">Delete</a></button></td>
+              </tr>
+              {% endfor %}
+        </table> 
+        <!-- nama = models.CharField(max_length=30)
+    umur = models.IntegerField()
+    rumah_sakit = models.CharField(max_length=30)
+    pendidikan = models.CharField(max_length=30) -->
+   </table> 
+</body>
+</html>
+{% endblock %}

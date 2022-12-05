@@ -1,0 +1,83 @@
+<!--
+    Source-code dari Shadiq dengan beberapa modifikasi
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Sentra Vaksin - E03 {% endblock%}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" href='{% static "/css/navbar.css" %}'>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" href='{% static "/css/home.css" %}'>
+        {% block additionallink %}{% endblock additionallink %}
+
+
+        
+    </head>
+    <style>
+    .imagepantek {
+        height: 750px;
+    }
+    h1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    p {
+        float: right;
+        margin-top : 10px;
+        margin-left: 10px;
+        font-size: 35x;
+        
+    }
+
+    
+    </style>
+    <body style="background-color:#F6F9FA">
+        <nav class="navbar" id="navbar">
+            <div class="brand">
+                <img src='{% static "/img/brand.png" %}' alt="Sentra Vaksin Logo">
+                <p><b>Sentra Vaksin</b></p>
+            </div>
+            
+                {% block navmenu %}
+                
+                    <ul>
+                <li>
+                    <a class="nav-link" href="/jadwal/">Jadwal Vaksinasi</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/belum_vaksin/">Peserta Vaksin</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/efek-samping/">Efek Samping</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/daftar_nakes/">Daftar Nakes</a>
+                </li>
+                </ul>
+                    
+                {% endblock %}
+            
+        </nav>
+        <h1 class="tagline">{% block tagline %}Ayo Vaksin{% endblock  %}</h1>
+    <div class="image-container">
+        
+        <div class="imagepantek">
+            {% block content %}{% endblock content %}
+            
+        </div>
+        
+    </div>
+        
+    </body>
+    
+    <footer>
+
+    </footer>
+</html>

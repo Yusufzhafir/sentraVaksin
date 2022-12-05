@@ -1,0 +1,71 @@
+html, body {
+    font-family: Ubuntu;
+    color: #94505F;
+}
+body  {
+    background-image: url("../image/Background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    background-size: 100%;
+}
+.content {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+h1, h2 {
+    text-align: center;
+}
+h2 {
+    font-weight: normal;
+}
+button {
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: white;
+    background-color: #CD616E;
+    color: white;
+    font-family: Ubuntu;
+    font-weight: bold;
+    width: 260px;
+    height: 42px;
+    padding: 12px, 24px, 12px, 24px;
+    margin:0 auto;
+    display:block;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+img#backgroundblt{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-size: cover; */
+    /* border: 5px solid #EDAAB2; */
+    box-sizing: border-box;
+}
+img#backgroundombak{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px; 
+    bottom:0px;
+    /* background-size: cover; */
+    /* border: 5px solid #EDAAB2; */
+    box-sizing: border-box;
+}
+h1{
+    padding-top: 60px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 71px;
+    line-height: 82px;
+    text-align: center;
+
+    color: #94505F;
+}

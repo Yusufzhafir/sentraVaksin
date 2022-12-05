@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Sentra Vaksin - E03 {% endblock%}</title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" href='{% static "/css/navbar.css" %}'>
+
+        
+    </head>
+    <body style="background-color:#F6F9FA">
+        <nav class="navbar" id="navbar">
+            <div class="brand">
+                <img src='{% static "/img/brand.png" %}' alt="Sentra Vaksin Logo">
+            </div>
+            
+                {% block navmenu %}
+                
+                    <ul>
+                <li>
+                    <a class="nav-link" href="/jadwal/">Jadwal Vaksinasi</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/belum_vaksin/">Peserta Vaksin</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/efek-samping/">Efek Samping</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/daftar_nakes/">Daftar Nakes</a>
+                </li>
+                </ul>
+                
+                
+                
+                {% endblock %}
+            
+        </nav>
+        
+    </body>
+    {% block content%}
+    
+    {% endblock%}
+    <footer>
+
+    </footer>
+</html>

@@ -1,0 +1,22 @@
+image: python:3.7
+
+stages:
+  - init
+  - deploy
+
+init:
+  stage: init
+  script:
+    - pip3 install psycopg2-binary
+    - pip3 install -r requirements.txt
+
+deployment:
+  stage: deploy
+  script:
+    - git remote add heroku https://heroku:54e229e6-571c-4070-8b0a-d4c6f57622bb@git.heroku.com/sentra-vaksin.git
+    - git checkout -B main
+    - git push heroku 
+  environment:
+    name: deploy
+  only:
+    - main

@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sentra Vaksin - E03</title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" href='{% static "/css/navbar.css" %}'>
+    </head>
+    <body style="background-color:#F6F9FA">
+        <nav class="navbar" id="navbar">
+            <div class="brand">
+                <img src='{% static "/img/brand.png" %}' alt="Sentra Vaksin Logo">
+            </div>
+            <ul>
+                <li>
+                    <a class="nav-link" href="/">Keluhan</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/">Vaksin</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/">Kontak Kami</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </body>
+    {% block content%}
+    
+    {% endblock%}
+    <footer>
+
+    </footer>
+</html>

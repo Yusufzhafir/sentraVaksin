@@ -1,0 +1,71 @@
+*{
+    font-family: Ubuntu;
+}
+a{
+    color: black;
+}
+body  {
+    background-image: url("../image/Background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    background-size: 100%;
+}
+.button{
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: white;
+    background-color: #CD616E;
+    font-family: Ubuntu;
+    font-weight: bold;
+    width: 108px;
+    height: 42px;
+    padding: 12px, 24px, 12px, 24px;
+    margin:0 auto;
+}
+.inform {
+    display: inline;
+    height: 42px;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #F6F9FA;
+    color: #CD616E;
+    border: 1px solid #CD616E;
+    font-size: 14px;
+}
+input{
+    width: 100px;
+}
+form {
+    width: 900px;
+    border-spacing: 4px;
+    border: 4x;
+    border-radius: 12px;
+    padding: 4px;
+    background-color: white;
+}
+table {
+    width: 1078px;
+    border-spacing: 4px;
+    border: 4x;
+    border-radius: 12px;
+    padding: 4px;
+    background-color: white;
+}
+th {
+    height: 47px;
+    border-radius: 8px;
+    padding: 12px, 48px, 12px, 48px;
+    background-color: #CD616E;
+    color: white;
+    font-weight: 600;
+}
+td{
+    height: 42px;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #F6F9FA;
+    color: #CD616E;
+    border: 1px solid #CD616E;
+    font-size: 14px;
+}
